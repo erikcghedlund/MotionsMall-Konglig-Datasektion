@@ -1,7 +1,7 @@
 BUILDDIR = .build
 
-TARGETS = motion.pdf
-DEPENDS = $(BUILDDIR)/skold-color.pdf $(BUILDDIR)/Makefile
+TARGETS = %.pdf
+DEPENDS = $(BUILDDIR)/skold-color.pdf $(BUILDDIR)/Makefile texlive_depends
 DIRECTORIES = $(BUILDDIR)
 
 MAKEFILEVERSION = dd5c1a0b1aef81daf05b62d951daec644e74b6bc
@@ -32,3 +32,8 @@ $(BUILDDIR)/%.pdf: $(DEPENDS) $(BUILDDIR)/%.tex
 
 %.pdf: $(BUILDDIR)/%.pdf
 	cp $(BUILDDIR)/$@ .
+
+texlive_depends: /usr/bin/tlmgr
+	tlmgr info --only-installed | grep fontaxes || tlmgr install fontaxes
+	tlmgr info --only-installed | grep lastpage || tlmgr install lastpage
+	tlmgr info --only-installed | grep lato     || tlmgr install lato
