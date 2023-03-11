@@ -1,0 +1,70 @@
+\documentclass[a4paper]{article}
+
+\usepackage[default]{lato}
+\usepackage[swedish]{babel}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\definecolor{cerise}{RGB}{232, 61, 132}
+\definecolor{gray3}{RGB}{66, 66, 66}
+
+\addtolength{\textheight}{4cm}
+\addtolength{\voffset}{-2cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\hoffset}{-1cm}
+\setlength{\headheight}{40pt}
+
+\pagestyle{fancy}
+\thispagestyle{fancy}
+\fancyhead[L]{\small{Motion till -SM\\\textcolor{gray3}{dd-mm-yyyy}}}
+\fancyhead[C]{\includegraphics[width=1.25cm,height=1.25cm]{./skold-color.pdf}}
+\fancyhead[R]{\small{\textcolor{gray3}{<Dokumentansvarig>\\sida \thepage{} av \pageref{LastPage}}}}
+\fancyfoot[C]{\small{\textcolor{gray3}{Konglig Datasektionen, THS 100 44, datasektionen.se}}}
+\renewcommand{\headrulewidth}{0pt}
+
+\title{\textcolor{cerise}{\textbf{
+    Motion angående\\
+    % Din titel
+}}}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy} % Smutsigt fulhack för att få header på första sidan
+
+\section*{\textcolor{cerise}{
+    Bakgrund
+}}
+
+% Kort text som beskriver varför motionen läggs
+
+\section*{\textcolor{cerise}{
+    Förslag till beslut
+}}
+
+	Mot bakgrund av ovanstående yrkar jag:
+
+\newcounter{attnummer}
+\setcounter{attnummer}{1}
+\begin{list}{\bf att$_{\theattnummer}$\stepcounter{attnummer}}{}
+\item
+\end{list}
+
+\vspace{2cm}
+\noindent
+% Name, eventuell titel eller annat skoj
+% \begin{center}
+% \includegraphics[scale=0.5]{
+    % Eventuell fin bild du vill visa.
+%     ./logo.png
+% }
+% \end{center}
+
+
+\end{document}
