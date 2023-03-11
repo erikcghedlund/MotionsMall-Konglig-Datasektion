@@ -1,7 +1,8 @@
 BUILDDIR = .build
+IMAGESWILDCARD = $(wildcard *.png) $(wildcard *.jpg) $(wildcard *.jpeg) $(wildcard *.gif)
 
-TARGETS = %.pdf
-DEPENDS = $(BUILDDIR)/skold-color.pdf $(BUILDDIR)/Makefile texlive_depends
+TARGETS = $(subst .tex,.pdf,$(wildcard *.tex))
+DEPENDS = $(BUILDDIR)/skold-color.pdf $(BUILDDIR)/Makefile texlive_depends image_move
 DIRECTORIES = $(BUILDDIR)
 
 MAKEFILEVERSION = dd5c1a0b1aef81daf05b62d951daec644e74b6bc
@@ -18,6 +19,9 @@ clean:
 $(BUILDDIR):
 	mkdir ./$@
 
+echo:
+	echo $(T)
+
 $(BUILDDIR)/Makefile: $(BUILDDIR) /usr/bin/wget
 	/usr/bin/wget $(MAKEFILEURL) -O $@ --no-clobber --quiet || :
 
@@ -26,6 +30,9 @@ $(BUILDDIR)/skold-color.pdf: $(BUILDDIR) /usr/bin/wget
 
 $(BUILDDIR)/%.tex: %.tex $(BUILDDIR)
 	cp $< $@
+
+image_move:
+	mv $(IMAGESWILDCARD) $(BUILDDIR) || :
 
 $(BUILDDIR)/%.pdf: $(DEPENDS) $(BUILDDIR)/%.tex
 	make $(notdir $@) -C $(BUILDDIR) 
