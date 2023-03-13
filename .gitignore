@@ -274,3 +274,12 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# Build folder created by the makefile
+.build
+
+# Any pdf
+*.pdf
+
+# Any backup
+*~
