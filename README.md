@@ -70,6 +70,8 @@ latex-pakethanterare. I make-filen finns ett kommando för att installera dessa 
 make install_texlive_depends
 ```
 
+Om du har Nix finns allt som behövs i paketet `texlive.combined.scheme-full`.
+
 ## Kompilera LaTeX-filen
 
 Att kompilera din LaTeX-fil, efter att du installerat alla dependencies borde vara så enkelt som:

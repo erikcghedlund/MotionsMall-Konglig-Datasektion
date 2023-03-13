@@ -41,6 +41,6 @@ $(BUILDDIR)/%.pdf: $(DEPENDS) $(BUILDDIR)/%.tex
 
 install_texlive_depends:
 	$(foreach pkg,$(TEXLIVEDEPENDS),tlmgr info --only-installed | grep $(pkg) || tlmgr install $(pkg);)
-	
+
 remove_texlive_depends:
 	tlmgr remove $(TEXLIVEDEPENDS)
