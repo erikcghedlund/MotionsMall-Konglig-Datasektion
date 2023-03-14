@@ -10,6 +10,7 @@
 \usepackage{lastpage}
 \usepackage{parskip}
 
+
 \definecolor{cerise}{RGB}{232, 61, 132}
 \definecolor{gray3}{RGB}{66, 66, 66}
 
@@ -21,21 +22,15 @@
 
 \pagestyle{fancy}
 \thispagestyle{fancy}
-\fancyhead[L]{\small{
-    Motion till -SM % Skriv SM-namn
-\\\textcolor{gray3}{
-    dd-mm-yyyy % Datum för SM
-}}}
+\fancyhead[L]{\small{Motion till dÅre-SM\\\textcolor{gray3}{16-01-2024}}}
 \fancyhead[C]{\includegraphics[width=1.25cm,height=1.25cm]{./skold-color.pdf}}
-\fancyhead[R]{\small{\textcolor{gray3}{
-    <Dokumentansvarig>\\ % Skriv ditt namn här
-    sida \thepage{} av \pageref{LastPage}}}}
+\fancyhead[R]{\small{\textcolor{gray3}{Vad fan är dokumentansvarig?\\sida \thepage{} av \pageref{LastPage}}}}
 \fancyfoot[C]{\small{\textcolor{gray3}{Konglig Datasektionen, THS 100 44, datasektionen.se}}}
 \renewcommand{\headrulewidth}{0pt}
 
 \title{\textcolor{cerise}{\textbf{
     Motion angående\\
-    % Din titel
+    att sätta Google Docs i skamhörnan
 }}}
 
 \date{}
@@ -49,7 +44,7 @@
     Bakgrund
 }}
 
-% Kort text som beskriver varför motionen läggs
+Över min döda kropp att vi börjar använda Google Docs över \LaTeX{} på vår ärorika sektion.
 
 \section*{\textcolor{cerise}{
     Förslag till beslut
@@ -60,20 +55,15 @@
 \newcounter{attnummer}
 \setcounter{attnummer}{1}
 \begin{list}{\bf att$_{\theattnummer}$\stepcounter{attnummer}}{}
-\item
+\item Officiellt deklarera Google Docs som \textit{cringe}.
 \end{list}
 
 \vspace{2cm}
 \noindent
-% Name, eventuell titel eller annat skoj
-
-% Avkommentera följande om du vill visa en bild
-% \begin{center}
-% \includegraphics[scale=0.5]{
-    % Eventuell fin bild du vill visa.
-%     ./logo.png
-% }
-% \end{center}
+Erik Hedlund, \LaTeX{}-expert
+\begin{center}
+\includegraphics[scale=0.5]{./meme.jpg}
+\end{center}
 
 
 \end{document}
