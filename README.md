@@ -72,6 +72,8 @@ make install_texlive_depends
 
 Om du har Nix finns allt som behövs i paketet `texlive.combined.scheme-full`.
 
+För Arch finns alla nödvändiga paket i paketen `texlive-latexextra texlive-langeuropean texlive-fontsextra`
+
 ## Kompilera LaTeX-filen
 
 Att kompilera din LaTeX-fil, efter att du installerat alla dependencies borde vara så enkelt som:
